@@ -8,27 +8,9 @@
 </head>
 <body>
     <script>
-    
-        var request=new XMLHttpRequest();
-        request.open('GET','https://restcountries.com/v3.1/all',true)
-        request.send();
-        request.onload=function(){
-            var data=JSON.parse(this.response)
-            console.log(data)
-
-            for(i=0;i<data.length;i++){
-                console.log(data[i].flags)
-            }
-
-            for(var obj of data){
-                console.log(obj.flags)
-            }
-
-            for(var key in data){
-                console.log(data[key].flags);
-            }
-
-        }
+        var obj1={name:"Person 1",age:5};
+        var obj2={age:5,name:"Person1"};
+              console.log(obj1==obj2)
     </script>
 </body>
 </html>
